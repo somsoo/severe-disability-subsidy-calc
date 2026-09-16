@@ -3,21 +3,57 @@
 <html lang="ko">
 <head>
 <link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/><script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "2026 중증장애인 장애인연금·부가급여 수령액 계산기",
-    "description": "2026년 보건복지부 최신 장애인연금 지급 기준 적용. 만 18세 이상 중증장애인 기초급여(월 최대 334,810원) 및 소득계층별 부가급여(최대 434,810원) 실시간 정밀 모의계산기.",
-    "url": "https://severe-disability-subsidy-calc.enjoy-onepage.com/",
-    "applicationCategory": "FinanceApplication",
-    "operatingSystem": "All",
-    "browserRequirements": "Requires JavaScript. Requires HTML5.",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "KRW"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://severe-disability-subsidy-calc.enjoy-onepage.com/#webapp",
+      "name": "2026 중증장애인 장애인연금 및 부가급여 모의계산기",
+      "url": "https://severe-disability-subsidy-calc.enjoy-onepage.com/",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript. Requires HTML5.",
+      "description": "2026년 최신 장애인연금법 기준! 중증장애인 기초급여(월 33.4만원)+부가급여 통합 모의계산 및 선정기준액 자격 진단.",
+      "image": "https://severe-disability-subsidy-calc.enjoy-onepage.com/og-image.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "KRW"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://severe-disability-subsidy-calc.enjoy-onepage.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "중증장애인 본인 소득이 없어도 가족 재산 때문에 탈락할 수 있나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "장애인연금은 원칙적으로 '본인 및 배우자'의 소득과 재산만을 합산하여 심사하며, 부모나 자녀 등 부양의무자 기준은 폐지되었습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "기초생활수급자 생계급여와 중복으로 수령 가능한가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "네, 기초수급자도 장애인연금을 수령할 수 있으나 생계급여 산정 시 소득으로 일부 상계될 수 있으며, 부가급여가 우대 지원됩니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "신청은 어디서 어떻게 하나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "주민등록 주소지 관할 읍·면·동 행정복지센터(주민센터)를 방문하거나 '복지로(bokjiro.go.kr)' 웹사이트에서 온라인으로 신청할 수 있습니다."
+          }
+        }
+      ]
     }
-  }
+  ]
+}
   </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
