@@ -2,6 +2,11 @@
 
 <html lang="ko">
 <head>
+    <!-- Performance Optimization: Resource Preconnect -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
 <link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/><script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -97,7 +102,18 @@
     max-width: 100% !important;
     overflow: hidden !important;
   }
-</style>
+
+        /* U3 Accessibility: Global Keyboard Focus Ring Standard */
+        :focus-visible {
+            outline: 2px solid #3b82f6 !important;
+            outline-offset: 2px !important;
+        }
+        input:focus-visible, select:focus-visible, textarea:focus-visible, button:focus-visible {
+            outline: 2px solid #2563eb !important;
+            outline-offset: 1px !important;
+        }
+    
+    </style>
 <meta content="summary_large_image" name="twitter:card"/><meta content="2026 중증장애인 장애인연금·부가급여 계산기" name="twitter:title"/><meta content="2026년 최신 장애인연금(기초급여+부가급여) 월 최대 43.4만원 실시간 계산!" name="twitter:description"/><meta content="https://severe-disability-subsidy-calc.enjoy-onepage.com/og-image.png" name="twitter:image"/></head>
 <body class="bg-slate-50 text-slate-800 antialiased font-sans min-h-screen flex flex-col justify-between">
 <!-- 상단 슬림 띠배너 (헤더 직하단: 50~60px 슬림형) -->
@@ -138,7 +154,7 @@
 <!-- 1. 소득 계층 분류 -->
 <div>
 <label class="block text-xs font-bold text-slate-600 mb-1.5">1. 수급자 가구 소득 계층</label>
-<select class="w-full p-3 font-semibold text-sm border border-slate-200 bg-slate-50 focus:bg-white rounded-xl focus:ring-2 focus:ring-teal-500 outline-none transition" id="incomeBracket">
+<select class="w-full p-3 font-semibold text-sm border border-slate-200 bg-slate-50 focus:bg-white rounded-xl focus:ring-2 focus:ring-teal-500 outline-none transition" id="incomeBracket" aria-label="incomeBracket">
 <option selected="" value="basic">생계·의료급여 수급자 (기초생활수급자)</option>
 <option value="housing">주거·교육급여 수급자 및 차상위계층</option>
 <option value="normal">차상위초과자 (선정기준액 이하 일반가구)</option>
@@ -150,10 +166,10 @@
 <label class="block text-xs font-bold text-slate-600 mb-1.5">2. 대상자 연령 구간</label>
 <div class="grid grid-cols-2 gap-2">
 <label class="flex items-center justify-center p-3 border rounded-xl cursor-pointer text-xs font-bold transition select-none bg-teal-50 border-teal-600 text-teal-700" id="labelAgeUnder65">
-<input checked="" class="hidden" name="ageRange" type="radio" value="under65"/> 만 18세 ~ 64세
+<input checked="" class="hidden" name="ageRange" type="radio" value="under65" aria-label="ageRange" /> 만 18세 ~ 64세
             </label>
 <label class="flex items-center justify-center p-3 border rounded-xl cursor-pointer text-xs font-bold transition select-none bg-white border-slate-200 text-slate-600" id="labelAgeOver65">
-<input class="hidden" name="ageRange" type="radio" value="over65"/> 만 65세 이상 (기초연금 전환)
+<input class="hidden" name="ageRange" type="radio" value="over65" aria-label="ageRange" /> 만 65세 이상 (기초연금 전환)
             </label>
 </div>
 <p class="text-xs text-slate-500 mt-1">* 65세 이상이 되면 기초급여는 기초연금으로 전환되고 장애인연금에서는 부가급여만 지급됩니다.</p>
@@ -161,7 +177,7 @@
 <!-- 3. 배우자 수급 여부 -->
 <div>
 <label class="block text-xs font-bold text-slate-600 mb-1.5">3. 배우자 동시 수급 여부</label>
-<select class="w-full p-3 font-semibold text-sm border border-slate-200 bg-slate-50 focus:bg-white rounded-xl focus:ring-2 focus:ring-teal-500 outline-none transition" id="spouseType">
+<select class="w-full p-3 font-semibold text-sm border border-slate-200 bg-slate-50 focus:bg-white rounded-xl focus:ring-2 focus:ring-teal-500 outline-none transition" id="spouseType" aria-label="spouseType">
 <option selected="" value="single">단독 수급 (배우자 없음 또는 비수급)</option>
 <option value="both">부부 동시 수급 (기초급여 각각 20% 감액)</option>
 </select>
@@ -173,7 +189,7 @@
 <span class="text-[11px] text-slate-400">시설 입소자의 경우 부가급여 지급액이 다릅니다</span>
 </div>
 <label class="relative inline-flex items-center cursor-pointer">
-<input class="sr-only peer" id="facilityCheckbox" type="checkbox"/>
+<input class="sr-only peer" id="facilityCheckbox" type="checkbox" aria-label="Facilitycheckbox" />
 <div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-teal-600"></div>
 </label>
 </div>
