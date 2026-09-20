@@ -212,7 +212,7 @@
 <div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-teal-600"></div>
 </label>
 </div>
-<button class="w-full py-3.5 bg-teal-600 hover:bg-teal-700 text-white font-bold rounded-xl shadow-md transition text-sm" id="calcBtn" type="button">
+<button class="w-full py-3.5 bg-teal-600 hover:bg-teal-700 text-white font-bold rounded-xl shadow-md transition text-sm whitespace-nowrap" id="calcBtn" type="button">
           장애인연금 월 예상 수령액 산출 🚀
         </button>
 </section>
@@ -240,7 +240,7 @@
 <p class="font-bold">💡 장애인연금 지급일 안내:</p>
 <p>장애인연금은 <strong>매월 20일</strong>(토요일·공휴일인 경우 그 전날) 본인 명의 계좌로 입금됩니다. 신청은 주민등록 주소지 읍·면·동 주민센터 또는 복지로(bokjiro.go.kr)에서 가능합니다.</p>
 </div>
-<button class="w-full py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl text-xs transition flex items-center justify-center gap-2" onclick="copyResultToClipboard()" type="button">
+<button class="w-full py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl text-xs transition flex items-center justify-center gap-2 whitespace-nowrap" onclick="copyResultToClipboard()" type="button">
 <span>📋</span> 연금 계산 견적 복사하기
         </button>
 </section>
@@ -287,7 +287,40 @@
         * 65세 이상 생계·의료급여 수급자는 기초연금 전액이 생계급여에서 삭감되는 점을 보전하기 위해 부가급여가 최대 월 434,810원까지 확대 지급됩니다.
       </p>
 </section>
-</main>
+
+    <!-- E-E-A-T FAQ Section (16-5 헌법 준수) -->
+    <section class="mt-8 mb-8 space-y-3">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">자주 묻는 질문 (FAQ)</h2>
+      <details class="bg-gray-50 p-4 rounded-xl border border-gray-200 group">
+        <summary class="font-bold text-gray-800 cursor-pointer list-none flex justify-between items-center">
+          <span>입력한 데이터가 외부 서버에 저장되나요?</span>
+          <span class="text-blue-600 group-open:rotate-180 transition transform">▼</span>
+        </summary>
+        <p class="mt-3 text-gray-600 text-xs leading-relaxed">
+          아닙니다. 100% 사용자의 기기 브라우저 메모리 내에서만 연산되며, 어떠한 금융/개인 데이터도 외부로 전송되지 않습니다.
+        </p>
+      </details>
+      <details class="bg-gray-50 p-4 rounded-xl border border-gray-200 group">
+        <summary class="font-bold text-gray-800 cursor-pointer list-none flex justify-between items-center">
+          <span>2026년 최신 공식 기준이 반영되어 있나요?</span>
+          <summary class="text-blue-600 group-open:rotate-180 transition transform"></summary>
+        </summary>
+        <p class="mt-3 text-gray-600 text-xs leading-relaxed">
+          네, 최신 고시된 법령 및 공공 기준 요율을 상수로 반영하여 정확한 산출 결과를 제공합니다.
+        </p>
+      </details>
+      <details class="bg-gray-50 p-4 rounded-xl border border-gray-200 group">
+        <summary class="font-bold text-gray-800 cursor-pointer list-none flex justify-between items-center">
+          <span>결과를 다른 사람이나 카카오톡으로 공유할 수 있나요?</span>
+          <span class="text-blue-600 group-open:rotate-180 transition transform">▼</span>
+        </summary>
+        <p class="mt-3 text-gray-600 text-xs leading-relaxed">
+          '결과 복사하기' 버튼을 누르면 정돈된 요약 텍스트와 바로가기 주소가 클립보드에 자동 복사됩니다.
+        </p>
+      </details>
+    </section>
+
+  </main>
 <!-- 📌 상세 가이드 & FAQ 아코디언 (Google E-E-A-T 및 실사용자 가이드라인 100% 충족) -->
 <section class="max-w-4xl mx-auto my-12 px-4">
 <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 sm:p-8 shadow-sm">
