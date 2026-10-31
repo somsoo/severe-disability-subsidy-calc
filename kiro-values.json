@@ -1,0 +1,18 @@
+{
+ "app": "severe-disability-subsidy-calc",
+ "host": "severe-disability-subsidy-calc.enjoy-onepage.com",
+ "watch": false,
+ "status": "unverified",
+ "checked": "",
+ "soft_days": 60,
+ "hard_days": 120,
+ "grace_days": 31,
+ "hide": [],
+ "pages": [
+  "index.html"
+ ],
+ "values": {},
+ "sources": {},
+ "valid_until": "2027-03-31",
+ "note": "이 페이지의 장애인연금 금액은 2026년 4월~2027년 3월 기준"
+}
